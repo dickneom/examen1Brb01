@@ -1,11 +1,18 @@
-<h4>Tienda Info</h4>
-<hr>
-<div *ngIf="tiendaService.getTiendaSeleccionada()" >
-  <p>id: {{tiendaService.getTiendaSeleccionada().id}}</p>
-  <p>Nombres: {{tiendaService.getTiendaSeleccionada().nombres}}</p>
-  <p>Dirección: {{tiendaService.getTiendaSeleccionada().direccion}}</p>
-  <p>Fecha Apertura: {{tiendaService.getTiendaSeleccionada().fechaApertura}}</p>
-  <p>RUC: {{tiendaService.getTiendaSeleccionada().RUC}}</p>
-  <p>Matriz: {{tiendaService.getTiendaSeleccionada().matriz}}</p>
-  <!-- <p>Desde la propiedad tienda: {{tienda.nombres}}</p> -->
+<div *ngIf="tiendaService.getTiendaSeleccionada()">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Tienda Info</mat-card-title>
+    </mat-card-header>
+    <!-- <h4>Tienda Info</h4>
+      <hr> -->
+    <mat-card-content>
+      <p>id: {{tiendaService.getTiendaSeleccionada().id}}</p>
+      <p>Nombres: {{tiendaService.getTiendaSeleccionada().nombres}}</p>
+      <p>Dirección: {{tiendaService.getTiendaSeleccionada().direccion}}</p>
+      <p>Fecha Apertura: {{tiendaService.getTiendaSeleccionada().fechaApertura}}</p>
+      <p>RUC: {{tiendaService.getTiendaSeleccionada().RUC}}</p>
+      <p>Matriz: {{tiendaService.getTiendaSeleccionada().matriz}}</p>
+    </mat-card-content>
+    <!-- <p>Desde la propiedad tienda: {{tienda.nombres}}</p> -->
+  </mat-card>
 </div>

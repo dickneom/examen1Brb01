@@ -1,5 +1,5 @@
-<h4>Carrusel</h4>
-<hr>
+<!-- <h4>Carrusel</h4>
+<hr> -->
 <ngb-carousel *ngIf="tiendaService.getTiendas().length > 0">
   <ng-template ngbSlide *ngFor="let dato of tiendaService.getTiendas(); let i = index">
     <img [src]="'../../assets/images/'+(i+1)+'.jpg'" alt="Random first slide">

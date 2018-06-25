@@ -74,9 +74,9 @@ export class TiendaService {
 
   // YA
   setTiendaSeleccionada(tienda: Tienda): void {
-    console.log('TiendaService setTiendaSeleccionada seleccionando: ' + tienda.nombres);
+    // console.log('TiendaService setTiendaSeleccionada seleccionando: ' + tienda.nombres);
     this.tiendaSeleccionada = tienda;
-    console.log('TiendaService setTiendaSeleccionada seleccionado: ' + this.tiendaSeleccionada.nombres);
+    // console.log('TiendaService setTiendaSeleccionada seleccionado: ' + this.tiendaSeleccionada.nombres);
   }
 
   // YA

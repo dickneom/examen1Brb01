@@ -1,6 +1,6 @@
-<h4>Producto Form</h4>
-<hr>
 <div *ngIf="tiendaService.getTiendaSeleccionada()">
+  <h4>Producto Form</h4>
+  <hr>
   <div *ngIf="producto">
     <form #ProductoForm="ngForm" (ngSubmit)="agregarProducto()">
       <div>

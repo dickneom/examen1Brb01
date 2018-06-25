@@ -1,30 +1,60 @@
-<h4>Tienda Form</h4>
-<hr>
-<form #TiendaForm="ngForm" (ngSubmit)="agregarTienda()">
-  <!-- <div>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Tienda Form</mat-card-title>
+  </mat-card-header>
+  <!-- <h4>Tienda Form</h4> -->
+  <!-- <hr> -->
+  <form #TiendaForm="ngForm" (ngSubmit)="agregarTienda()">
+    <mat-card-content>
+      <!-- <div>
     <label for="id">Id: </label>
     <input id="id" type="text" [(ngModel)]="tienda.id" name="id" />
   </div> -->
-  <div>
+      <mat-form-field class="ancho100">
+        <input matInput placeholder="Nombres" id="nombres" [(ngModel)]="tienda.nombres" name="nombres" required>
+      </mat-form-field>
+      <!-- <div>
     <label for="nombres">Nombre: </label>
     <input id="nombres" type="text" [(ngModel)]="tienda.nombres" name="nombres" />
-  </div>
-  <div>
+  </div> -->
+      <mat-form-field class="ancho100">
+        <input matInput placeholder="Dirección" id="direccion" [(ngModel)]="tienda.direccion" name="direccion" required>
+      </mat-form-field>
+      <!-- <div>
     <label for="direccion">Direccion: </label>
     <input id="direccion" type="text" [(ngModel)]="tienda.direccion" name="direccion" />
-  </div>
-  <div>
+  </div> -->
+      <mat-form-field class="ancho100">
+        <input matInput [matDatepicker]="picker" placeholder="Fecha de Apertura" required class="ancho100" name="fechaApertura" [(ngModel)]="tienda.fechaApertura">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <!-- <div>
     <label for="fechaApertura">Fecha de Apertura: </label>
     <input id="fechaApertura" [(ngModel)]="tienda.fechaApertura" name="fechaApertura" />
-  </div>
-  <div>
+  </div> -->
+      <mat-form-field class="ancho100">
+        <input matInput placeholder="RUC" id="ruc" [(ngModel)]="tienda.RUC" name="ruc" required>
+      </mat-form-field>
+      <!-- <div>
     <label for="ruc">RUC: </label>
     <input id="ruc" type="text" [(ngModel)]="tienda.RUC" name="RUC" />
-  </div>
-  <div>
+  </div> -->
+      <div class="ancho100">
+        <mat-checkbox type="checkbox" class="ancho100" [(ngModel)]="tienda.matriz" name="matriz">Matriz</mat-checkbox>
+      </div>
+      <!-- <div>
     <label for="matriz">Matriz: </label>
     <input id="matriz" type="checkbox" [(ngModel)]="tienda.matriz" name="matriz" />
-  </div>
-  <!-- <button (click)="agregarTienda()">Grabar</button> -->
-  <button>Grabar</button>
-</form>
+  </div> -->
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="ancho100">
+        <button mat-raised-button [disabled]="!TiendaForm.form.valid">Grabar</button>
+      </div>
+      <!-- <button (click)="agregarTienda()">Grabar</button> -->
+      <!-- <button mat-button (click)="nuevaTienda(); fTienda.reset()">Nueva Tienda</button> -->
+      <!-- <button>Grabar</button> -->
+    </mat-card-actions>
+  </form>
+</mat-card>
