@@ -1,0 +1,11 @@
+<h4>Tienda Botones</h4>
+<!-- <ul> -->
+  <div>
+    <!-- <button *ngFor="let boton of botones" (click)="onSelect(boton)">
+      <span>{{boton.id}}</span> {{boton.nombre}}
+    </button> -->
+    <button *ngFor="let dato of tiendaService.getTiendas()" (click)="seleccionar(dato)">
+      <span>{{dato.id}}</span> {{dato.nombres}}
+    </button>
+  </div>
+<!-- </ul> -->

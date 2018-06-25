@@ -1,0 +1,30 @@
+<h4>Tienda Form</h4>
+<hr>
+<form #TiendaForm="ngForm" (ngSubmit)="agregarTienda()">
+  <!-- <div>
+    <label for="id">Id: </label>
+    <input id="id" type="text" [(ngModel)]="tienda.id" name="id" />
+  </div> -->
+  <div>
+    <label for="nombres">Nombre: </label>
+    <input id="nombres" type="text" [(ngModel)]="tienda.nombres" name="nombres" />
+  </div>
+  <div>
+    <label for="direccion">Direccion: </label>
+    <input id="direccion" type="text" [(ngModel)]="tienda.direccion" name="direccion" />
+  </div>
+  <div>
+    <label for="fechaApertura">Fecha de Apertura: </label>
+    <input id="fechaApertura" [(ngModel)]="tienda.fechaApertura" name="fechaApertura" />
+  </div>
+  <div>
+    <label for="ruc">RUC: </label>
+    <input id="ruc" type="text" [(ngModel)]="tienda.RUC" name="RUC" />
+  </div>
+  <div>
+    <label for="matriz">Matriz: </label>
+    <input id="matriz" type="checkbox" [(ngModel)]="tienda.matriz" name="matriz" />
+  </div>
+  <!-- <button (click)="agregarTienda()">Grabar</button> -->
+  <button>Grabar</button>
+</form>

@@ -1,0 +1,22 @@
+<h4>Producto Form</h4>
+<hr>
+<div *ngIf="tiendaService.getTiendaSeleccionada()">
+  <div *ngIf="producto">
+    <form #ProductoForm="ngForm" (ngSubmit)="agregarProducto()">
+      <input type="text" [(ngModel)]="producto.numeroProducto" name="numeroProducto" />
+      <input type="text" [(ngModel)]="producto.nombre" name="nombre" />
+      <input type="text" [(ngModel)]="producto.descripcion" name="descripcion" />
+      <input type="text" [(ngModel)]="producto.precio" name="precio" />
+      <input type="text" [(ngModel)]="producto.aniosGarantia" name="aniosGarantia" />
+      <input type="text" [(ngModel)]="producto.teindaId" name="tiendaId" />
+      <!-- numeroProducto: number;
+        nombre: string;
+        descripcion: string;
+        precio: number;
+        fechaLanzamientoProducto: Date;
+        aniosGarantia: number;
+        tiendaId: number; -->
+      <button>Grabar</button>
+    </form>
+  </div>
+</div>

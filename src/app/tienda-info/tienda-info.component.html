@@ -1,0 +1,11 @@
+<h4>Tienda Info</h4>
+<hr>
+<div *ngIf="tiendaService.getTiendaSeleccionada()" >
+  <p>id: {{tiendaService.getTiendaSeleccionada().id}}</p>
+  <p>Nombres: {{tiendaService.getTiendaSeleccionada().nombres}}</p>
+  <p>Dirección: {{tiendaService.getTiendaSeleccionada().direccion}}</p>
+  <p>Fecha Apertura: {{tiendaService.getTiendaSeleccionada().fechaApertura}}</p>
+  <p>RUC: {{tiendaService.getTiendaSeleccionada().RUC}}</p>
+  <p>Matriz: {{tiendaService.getTiendaSeleccionada().matriz}}</p>
+  <!-- <p>Desde la propiedad tienda: {{tienda.nombres}}</p> -->
+</div>
