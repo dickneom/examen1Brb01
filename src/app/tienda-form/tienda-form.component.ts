@@ -18,7 +18,7 @@ export class TiendaFormComponent implements OnInit {
   }
 
   agregarTienda() {
-    console.log('TiendaForm agregarTienda: nombres: ' + this.tienda.nombres);
+    // console.log('TiendaForm agregarTienda: nombres: ' + this.tienda.nombres);
     this.tiendaService.agregarTienda(this.tienda);
     this.tienda = this.tiendaService.nuevaTienda();
   }

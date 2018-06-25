@@ -29,10 +29,14 @@ export class TiendaService {
   }
 
   agregarProducto(producto: Producto): void {
+    console.log('TiendaService agregarProducto nombre: ' + producto.nombre);
     this.tiendas.forEach(tienda => {
       if (tienda.id === this.tiendaSeleccionada.id) {
         producto.tiendaId = this.tiendaSeleccionada.id;
+        console.log('TiendaService agregarProducto agregando: ' + producto.nombre);
         tienda.productos.push(producto);
+        console.log('TiendaService agregarProducto agregado: ' + tienda.productos[0].nombre);
+        this.tiendaSeleccionada = tienda;
       }
     });
   }
@@ -99,6 +103,7 @@ export class TiendaService {
     // });
   }
 
+  // YA
   nuevaTienda(): Tienda {
     const t = new Tienda();
     t.nombres = '';

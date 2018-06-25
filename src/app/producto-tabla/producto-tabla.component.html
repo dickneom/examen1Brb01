@@ -1,3 +1,40 @@
-<p>
-  producto-tabla works!
-</p>
+<h4>Producto Tabla</h4>
+<hr>
+<div *ngIf="tiendaService.getTiendaSeleccionada()">
+  <table>
+    <tr>
+      <th>
+        Núm Prod
+      </th>
+      <th>
+        Nombre
+      </th>
+      <th>
+        Descripción
+      </th>
+      <th>
+        Precio
+      </th>
+      <th>
+        Garantia (Años)
+      </th>
+    </tr>
+    <tr *ngFor="let producto of tiendaService.getTiendaSeleccionada().productos">
+      <td>
+        {{producto.numeroProducto}}
+      </td>
+      <td>
+        {{producto.nombre}}
+      </td>
+      <td>
+        {{producto.descripcion}}
+      </td>
+      <td>
+        {{producto.precio}}
+      </td>
+      <td>
+        {{producto.aniosGarantia}}
+      </td>
+    </tr>
+  </table>
+</div>

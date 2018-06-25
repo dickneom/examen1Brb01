@@ -19,6 +19,7 @@ export class ProductoFormComponent implements OnInit {
 
   agregarProducto() {
     this.tiendaService.agregarProducto(this.producto);
+    this.producto = this.tiendaService.nuevoProducto();
   }
 
 }

@@ -3,19 +3,30 @@
 <div *ngIf="tiendaService.getTiendaSeleccionada()">
   <div *ngIf="producto">
     <form #ProductoForm="ngForm" (ngSubmit)="agregarProducto()">
-      <input type="text" [(ngModel)]="producto.numeroProducto" name="numeroProducto" />
-      <input type="text" [(ngModel)]="producto.nombre" name="nombre" />
-      <input type="text" [(ngModel)]="producto.descripcion" name="descripcion" />
-      <input type="text" [(ngModel)]="producto.precio" name="precio" />
-      <input type="text" [(ngModel)]="producto.aniosGarantia" name="aniosGarantia" />
-      <input type="text" [(ngModel)]="producto.teindaId" name="tiendaId" />
-      <!-- numeroProducto: number;
-        nombre: string;
-        descripcion: string;
-        precio: number;
-        fechaLanzamientoProducto: Date;
-        aniosGarantia: number;
-        tiendaId: number; -->
+      <div>
+        <label for="numeroProducto">Número Producto: </label>
+        <input id="numeroProducto" type="text" [(ngModel)]="producto.numeroProducto" name="numeroProducto" />
+      </div>
+      <div>
+        <label for="nombre">Nombre: </label>
+        <input id="nombre" type="text" [(ngModel)]="producto.nombre" name="nombre" />
+      </div>
+      <div>
+        <label for="descripcion">Descripcion: </label>
+        <input id="descripcion" type="text" [(ngModel)]="producto.descripcion" name="descripcion" />
+      </div>
+      <div>
+        <label for="precio">Precio: </label>
+        <input id="precio" type="text" [(ngModel)]="producto.precio" name="precio" />
+      </div>
+      <div>
+        <label for="aniosGarantia">Garantía (Años): </label>
+        <input id="aniosGarantia" type="text" [(ngModel)]="producto.aniosGarantia" name="aniosGarantia" />
+      </div>
+      <div>
+        <label for="tiendaID">Tienda id: </label>
+        <input id="tiendaId" type="text" [(ngModel)]="producto.teindaId" name="tiendaId" />
+      </div>
       <button>Grabar</button>
     </form>
   </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TiendaService } from '../servicio/tienda.service';
 
 @Component({
   selector: 'app-producto-tabla',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductoTablaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tiendaService: TiendaService) { }
 
   ngOnInit() {
   }

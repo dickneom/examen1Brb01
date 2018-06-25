@@ -18,13 +18,13 @@ export class TiendaBotonesComponent implements OnInit {
   }
 
   seleccionar(dato: Tienda) {
-    if (dato === undefined) {
-      console.log('TiendaBotones seleccionar tienda indefinida');
-    } else {
-      console.log('TiendaBotones seleccionar (no indefinido): ' + dato.nombres);
-    }
-    console.log('TiendaBotones seleccionar boton presionado: id: ' + dato.id);
-    console.log('TiendaBotones seleccionar boton presionado: nombres: ' + dato.nombres);
+    // if (dato === undefined) {
+    //   console.log('TiendaBotones seleccionar tienda indefinida');
+    // } else {
+    //   console.log('TiendaBotones seleccionar (no indefinido): ' + dato.nombres);
+    // }
+    // console.log('TiendaBotones seleccionar boton presionado: id: ' + dato.id);
+    // console.log('TiendaBotones seleccionar boton presionado: nombres: ' + dato.nombres);
     this.tiendaService.imprimirTiendas();
     this.tiendaService.setTiendaSeleccionada(dato);
   }

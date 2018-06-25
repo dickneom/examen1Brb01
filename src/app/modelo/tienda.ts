@@ -8,5 +8,5 @@ export class Tienda {
     RUC: number;
     matriz: boolean;
 
-    productos: Producto[];
+    productos: Producto[] = [];
 }
