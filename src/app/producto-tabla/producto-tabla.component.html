@@ -1,6 +1,7 @@
-<h4>Producto Tabla</h4>
+<!-- <h4>Producto Tabla</h4>
 <hr>
-<div *ngIf="tiendaService.getTiendaSeleccionada()">
+<h3>sin primeng</h3>
+<div *ngIf="tiendaService.getTiendaSeleccionada().productos.length">
   <table>
     <tr>
       <th>
@@ -37,4 +38,59 @@
       </td>
     </tr>
   </table>
+</div>
+<hr> -->
+<!-- <h3>con primeng</h3> -->
+<div *ngIf="tiendaService.getTiendaSeleccionada() && tiendaService.getTiendaSeleccionada().productos.length">
+  <p-panel>
+      <p-header>
+          <div class="ui-helper-clearfix">
+              <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Productos</span>
+              <!-- <p-splitButton [style]="{'float':'right'}" label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton> -->
+          </div>
+      </p-header>
+  <p-table [value]="tiendaService.getTiendaSeleccionada().productos">
+    <!-- <table> -->
+    <ng-template pTemplate="header">
+      <tr>
+        <th>
+          Núm Prod
+        </th>
+        <th>
+          Nombre
+        </th>
+        <th>
+          Descripción
+        </th>
+        <th>
+          Precio
+        </th>
+        <th>
+          Garantia (Años)
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-producto>
+      <!-- <tr *ngFor="let producto of tiendaService.getTiendaSeleccionada().productos"> -->
+      <tr>
+        <td>
+          {{producto.numeroProducto}}
+        </td>
+        <td>
+          {{producto.nombre}}
+        </td>
+        <td>
+          {{producto.descripcion}}
+        </td>
+        <td>
+          {{producto.precio}}
+        </td>
+        <td>
+          {{producto.aniosGarantia}}
+        </td>
+      </tr>
+    </ng-template>
+    <!-- </table> -->
+  </p-table>
+</p-panel>
 </div>

@@ -1,33 +1,82 @@
 <div *ngIf="tiendaService.getTiendaSeleccionada()">
-  <h4>Producto Form</h4>
-  <hr>
-  <div *ngIf="producto">
-    <form #ProductoForm="ngForm" (ngSubmit)="agregarProducto()">
-      <div>
-        <label for="numeroProducto">Número Producto: </label>
-        <input id="numeroProducto" type="text" [(ngModel)]="producto.numeroProducto" name="numeroProducto" />
+  <p-panel>
+    <p-header>
+      <div class="ui-helper-clearfix">
+        <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Producto</span>
+        <!-- <p-splitButton [style]="{'float':'right'}" label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton> -->
       </div>
-      <div>
+    </p-header>
+    <!-- <h4>Producto Form</h4> -->
+    <!-- <hr> -->
+    <div *ngIf="producto">
+      <form #ProductoForm="ngForm" (ngSubmit)="agregarProducto()">
+        <div class="row">
+          <!-- <span> -->
+          <label for="numeroProducto">Número Producto: </label>
+          <input pInputText id="numeroProducto" type="text" [(ngModel)]="producto.numeroProducto" name="numeroProducto" />
+          <!-- </span> -->
+        </div>
+        <div class="row">
+          <!-- <div>
+        <label for="numeroProducto">Número Producto: </label>
+        <input id="numeroProducto" pInputText type="text" [(ngModel)]="producto.numeroProducto" name="numeroProducto" />
+      </div> -->
+          <!-- <span class="ui-float-label">
+        <input id="float-input" type="text" size="30" pInputText>
+        <label for="float-input">Username</label>
+      </span> -->
+
+          <!-- <span> -->
+          <label for="nombre">Nombre: </label>
+          <input pInputText id="nombre" type="text" [(ngModel)]="producto.nombre" name="nombre" />
+          <!-- </span> -->
+        </div>
+        <!-- <div>
         <label for="nombre">Nombre: </label>
         <input id="nombre" type="text" [(ngModel)]="producto.nombre" name="nombre" />
-      </div>
-      <div>
+      </div> -->
+        <div class="row">
+          <!-- <span class="ui-float-label"> -->
+          <label for="descripcion">Descripción: </label>
+          <input id="descripcion" type="text" [(ngModel)]="producto.descripcion" name="descripcion" pInputText />
+          <!-- </span> -->
+        </div>
+        <!-- <div>
         <label for="descripcion">Descripcion: </label>
         <input id="descripcion" type="text" [(ngModel)]="producto.descripcion" name="descripcion" />
-      </div>
-      <div>
+      </div> -->
+        <div class="row">
+          <!-- <span class="ui-float-label"> -->
+          <label for="precio">Precio: </label>
+          <input id="precio" type="text" [(ngModel)]="producto.precio" name="precio" pInputText />
+          <!-- </span> -->
+        </div>
+        <!-- <div>
         <label for="precio">Precio: </label>
         <input id="precio" type="text" [(ngModel)]="producto.precio" name="precio" />
-      </div>
-      <div>
+      </div> -->
+        <div class="row">
+          <!-- <span class="ui-float-label"> -->
+          <label for="aniosGarantia">Garantía (Años): </label>
+          <input id="aniosGarantia" type="text" [(ngModel)]="producto.aniosGarantia" name="aniosGarantia" pInputText />
+          <!-- </span> -->
+        </div>
+        <!-- <div>
         <label for="aniosGarantia">Garantía (Años): </label>
         <input id="aniosGarantia" type="text" [(ngModel)]="producto.aniosGarantia" name="aniosGarantia" />
-      </div>
-      <div>
+      </div> -->
+        <div class="row">
+          <!-- <span class="ui-float-label"> -->
+          <label for="tiendaId">Tienda id: </label>
+          <input id="tiendaId" type="text" [(ngModel)]="producto.tiendaId" name="tiendaId" pInputText />
+          <!-- </span> -->
+        </div>
+        <!-- <div>
         <label for="tiendaID">Tienda id: </label>
         <input id="tiendaId" type="text" [(ngModel)]="producto.teindaId" name="tiendaId" />
-      </div>
-      <button>Grabar</button>
-    </form>
-  </div>
+      </div> -->
+        <button pButton icon="fa-check" class="ui-button-secondary" label="Grabar" class="ui-button-success"></button>
+      </form>
+    </div>
+  </p-panel>
 </div>

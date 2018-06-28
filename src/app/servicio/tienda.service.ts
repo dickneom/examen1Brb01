@@ -74,9 +74,9 @@ export class TiendaService {
 
   // YA
   setTiendaSeleccionada(tienda: Tienda): void {
-    // console.log('TiendaService setTiendaSeleccionada seleccionando: ' + tienda.nombres);
+    console.log('TiendaService setTiendaSeleccionada seleccionando: ' + tienda.nombres);
     this.tiendaSeleccionada = tienda;
-    // console.log('TiendaService setTiendaSeleccionada seleccionado: ' + this.tiendaSeleccionada.nombres);
+    console.log('TiendaService setTiendaSeleccionada seleccionado: ' + this.tiendaSeleccionada.nombres);
   }
 
   // YA
@@ -122,9 +122,11 @@ export class TiendaService {
     p.fechaLanzamientoProducto = new Date();
     p.precio = 0;
     p.aniosGarantia = 0;
-    if (this.tiendaSeleccionada) {
+    if (this.tiendaSeleccionada !== undefined) {
+      console.log('Por fin la tienda seleccionada no es indefinida');
       p.tiendaId = this.tiendaSeleccionada.id;
     } else {
+      console.log('Tienda seleccionada es indefinida');
       p.tiendaId = 0;
     }
     return p;

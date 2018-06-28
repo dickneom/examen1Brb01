@@ -15,6 +15,7 @@ import { ProductoTablaComponent } from './producto-tabla/producto-tabla.componen
 import { TiendaService } from './servicio/tienda.service';
 
 import { NgMaterialModule } from './ng-material/ng-material.module';
+import { NgPrimeModule } from './ng-prime/ng-prime.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NgMaterialModule } from './ng-material/ng-material.module';
     BrowserAnimationsModule,
     FormsModule,
     NgbModule.forRoot(),
-    NgMaterialModule
+    NgMaterialModule,
+    NgPrimeModule
   ],
   providers: [TiendaService],
   bootstrap: [AppComponent]

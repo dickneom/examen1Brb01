@@ -39,15 +39,18 @@
 // <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/omega/theme.css" />
 // <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
 // Con estos pasos me sale que no se puede localizar los archivos indicados.
-// Para solucionar esto: copie los modulos primeng y primeicons al directorio src/assets
+// Para solucionar esto:
+// instalar los modulos arriba indicados, se puede agregar el modulo:
+// npm install font-awesome --save
 // y agregue en la seccion styles de angular.json
-// "src/assets/primeicons/primeicons.css",
-// "src/assets/primeng/resources/themes/omega/theme.css",
-// "src/assets/primeng/resources/primeng.min.css"
-// y en el index.html agregue
-// <link rel="stylesheet" type="text/css" href="assets/primeng/resources/primeng.min.css" />
-// <link rel="stylesheet" type="text/html" href="assets/primeng/resources/themes/omega/theme.css" />
-// <link rel="stylesheet" type="text/html" href="assets/primeicons/primeicons.css" />
+// "styles": [
+//   "src/styles.css",
+//   "node_modules/font-awesome/css/font-awesome.min.css",
+//   "node_modules/primeng/resources/primeng.min.css",
+//   "node_modules/primeng/resources/themes/darkness/theme.css"
+// ],
+// Si se quiere utilizar los iconos de prime tambien agregar:
+// "node_modules/primeicons/primeicons.css",
 
 // Comunicacion entre componentes: Padre-Hijo / Hijo-Padre
 // Importar desde @angular/core: Input, Output, EventEmitter
@@ -69,6 +72,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+
+import 'hammerjs';
 
 if (environment.production) {
   enableProdMode();
